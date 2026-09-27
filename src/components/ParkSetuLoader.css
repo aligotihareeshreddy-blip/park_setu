@@ -1,0 +1,51 @@
+.parksetu-loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.parksetu-icon-wrapper {
+  position: relative;
+  width: 300px;
+  aspect-ratio: 470 / 270;
+}
+
+.parksetu-icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.road-animation {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.road-dashes {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 16 20;
+  stroke-dashoffset: 0;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.8));
+  animation: roadFlow 1.5s linear infinite;
+}
+
+@keyframes roadFlow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -72;
+  }
+}
